@@ -1,0 +1,262 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   POS Interface
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   /* Custom scrollbar for the admin list */
+    .scrollbar-thin::-webkit-scrollbar {
+      width: 8px;
+    }
+    .scrollbar-thin::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    .scrollbar-thin::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 4px;
+    }
+    .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+  </style>
+ </head>
+ <body class="bg-white">
+  <div class="max-w-[900px] mx-auto mt-4 border border-black relative" style="aspect-ratio: 16 / 12;">
+   <div class="flex h-full w-full">
+    <!-- Left vertical buttons column -->
+    <div class="flex flex-col gap-[2px] p-[2px] w-[80px]">
+     <button class="bg-blue-600 text-white text-[10px] font-semibold rounded-sm h-[40px]">
+      Other
+      <br/>
+      Functions
+     </button>
+     <button class="bg-blue-500 text-white text-[10px] font-semibold rounded-sm h-[40px]">
+      Information
+     </button>
+     <div class="flex justify-center items-center gap-1 h-[40px]">
+      <div class="relative w-[24px] h-[24px] rounded-full bg-blue-700 text-white text-[12px] font-semibold flex justify-center items-center">
+       88
+      </div>
+      <div class="relative w-[24px] h-[24px] rounded-full bg-red-700 text-white text-[12px] font-semibold flex justify-center items-center">
+       17
+      </div>
+     </div>
+     <button class="bg-purple-600 text-white text-[10px] font-semibold rounded-sm h-[40px]">
+      1st Class
+      <br/>
+      Stamp£1.69
+     </button>
+     <button class="bg-green-600 text-white text-[10px] font-semibold rounded-sm h-[40px]">
+      2nd Class
+      <br/>
+      Stamp£1.30
+     </button>
+     <button class="bg-yellow-400 text-black text-[12px] font-semibold rounded-sm h-[40px]">
+      Milkshake
+      <br/>
+      £2.50
+     </button>
+     <button class="bg-orange-500 text-black text-[12px] font-semibold rounded-sm h-[40px]">
+      Coffee
+      <br/>
+      £2.50
+     </button>
+     <button class="bg-gray-200 text-black text-[12px] font-semibold rounded-sm h-[40px]">
+      Milk 2L
+     </button>
+     <button class="bg-green-400 text-black text-[12px] font-semibold rounded-sm h-[40px]">
+      Milk 2L
+      <br/>
+      £3
+     </button>
+    </div>
+    <!-- Middle left main buttons -->
+    <div class="flex flex-col gap-[6px] flex-1 p-2">
+     <div class="bg-red-600 text-black text-[12px] font-semibold rounded-sm text-center py-1 select-none">
+      Lottery
+     </div>
+     <button class="bg-green-500 text-black text-[12px] font-semibold rounded-sm py-2">
+      Buy Lotto Ticket £2
+     </button>
+     <div class="flex gap-2">
+      <button class="bg-gray-400 text-black text-[12px] font-semibold rounded-sm py-2 flex-1">
+       Set for life £1.50
+      </button>
+      <button class="bg-green-500 text-black text-[12px] font-semibold rounded-sm py-2 flex-1">
+       Thunderball £1
+      </button>
+     </div>
+     <button class="bg-green-500 text-black text-[12px] font-semibold rounded-sm py-2">
+      Euro Millions£2.50
+     </button>
+     <button class="bg-blue-500 text-white text-[12px] font-semibold rounded-sm py-2">
+      Winning Ticket
+     </button>
+     <button class="bg-blue-500 text-white text-[12px] font-semibold rounded-sm py-2">
+      Winning Scratchcard
+     </button>
+    </div>
+    <!-- Middle right vertical buttons -->
+    <div class="flex flex-col gap-[2px] p-[2px] w-[60px]">
+     <button class="bg-sky-300 text-black text-[12px] font-semibold rounded-sm h-[40px]">
+      Up
+     </button>
+     <button class="bg-sky-300 text-black text-[12px] font-semibold rounded-sm h-[40px]">
+      Void
+     </button>
+     <button class="bg-sky-500 text-black text-[12px] font-semibold rounded-sm h-[40px]">
+      Down
+     </button>
+     <button class="bg-yellow-400 text-black text-[20px] font-semibold rounded-sm h-[40px] flex justify-center items-center">
+      <i class="fas fa-phone-volume">
+      </i>
+     </button>
+    </div>
+    <!-- Right panel -->
+    <div class="flex flex-col flex-1 p-2">
+     <div class="flex justify-between items-start mb-1">
+      <div>
+       <div class="text-black text-[14px] font-normal">
+        Total
+       </div>
+       <div class="text-black text-[12px] font-normal">
+        Items
+       </div>
+      </div>
+      <div class="text-black text-[14px] font-semibold">
+       £0.00
+      </div>
+      <div class="text-black text-[12px] font-normal">
+       2
+      </div>
+     </div>
+     <div class="text-black text-[14px] font-semibold mb-1">
+      Admin
+     </div>
+     <div class="flex-1 border border-black rounded-sm overflow-auto scrollbar-thin bg-blue-500 text-white text-[12px] font-normal">
+      <ul class="select-none">
+       <li class="px-1 py-[2px] border-b border-black">
+        Coke Zero Multipack
+        <span class="float-right">
+         £8.79
+        </span>
+       </li>
+       <li class="px-1 py-[2px] border-b border-black">
+        Quavers Cheese Pm125
+        <span class="float-right">
+         £1.25
+        </span>
+       </li>
+       <li class="px-1 py-[2px] border-b border-black">
+        Visa Circuit
+        <span class="float-right">
+         -£7.75
+        </span>
+       </li>
+       <li class="px-1 py-[2px] border-b border-black bg-blue-900">
+        Coke Zero/Diet Mpk £6.50
+        <span class="float-right">
+         -£2.29
+        </span>
+       </li>
+      </ul>
+     </div>
+     <div class="flex gap-1 mt-1">
+      <button class="bg-yellow-400 text-black text-[12px] font-semibold rounded-sm px-2 py-1 flex-shrink-0">
+       Cancel
+      </button>
+      <input aria-label="Input" class="border border-black rounded-sm flex-grow px-2 py-1 text-[12px]" type="text"/>
+     </div>
+     <div class="grid grid-cols-4 gap-1 mt-1">
+      <button class="bg-orange-400 text-black text-[12px] font-semibold rounded-sm py-2">
+       Alter
+      </button>
+      <button class="bg-gray-900 text-white text-[12px] font-semibold rounded-sm py-2">
+       7
+      </button>
+      <button class="bg-gray-900 text-white text-[12px] font-semibold rounded-sm py-2">
+       8
+      </button>
+      <button class="bg-gray-900 text-white text-[12px] font-semibold rounded-sm py-2">
+       9
+      </button>
+      <button class="bg-red-600 text-white text-[12px] font-semibold rounded-sm py-2">
+       Manage Products
+      </button>
+      <button class="bg-gray-900 text-white text-[12px] font-semibold rounded-sm py-2">
+       4
+      </button>
+      <button class="bg-gray-900 text-white text-[12px] font-semibold rounded-sm py-2">
+       5
+      </button>
+      <button class="bg-gray-900 text-white text-[12px] font-semibold rounded-sm py-2">
+       6
+      </button>
+      <button class="bg-green-600 text-white text-[12px] font-semibold rounded-sm py-2">
+       Qty / Barcode
+      </button>
+      <button class="bg-gray-900 text-white text-[12px] font-semibold rounded-sm py-2">
+       1
+      </button>
+      <button class="bg-gray-900 text-white text-[12px] font-semibold rounded-sm py-2">
+       2
+      </button>
+      <button class="bg-gray-900 text-white text-[12px] font-semibold rounded-sm py-2">
+       3
+      </button>
+      <button class="bg-red-700 text-white text-[12px] font-semibold rounded-sm py-2">
+       Total
+      </button>
+      <button class="bg-sky-500 text-white text-[12px] font-semibold rounded-sm py-2">
+       Session
+      </button>
+      <button class="bg-gray-900 text-white text-[12px] font-semibold rounded-sm py-2">
+       0
+      </button>
+      <button class="bg-gray-900 text-white text-[12px] font-semibold rounded-sm py-2">
+       00
+      </button>
+      <button class="bg-gray-900 text-white text-[12px] font-semibold rounded-sm py-2">
+       Del
+      </button>
+     </div>
+    </div>
+   </div>
+   <!-- Bottom bar with icons and labels -->
+   <div class="absolute bottom-0 left-0 right-0 flex items-center justify-between bg-white border-t border-black px-2 py-1 gap-1">
+    <div class="flex flex-col items-center text-[10px] text-black select-none w-[48px]">
+     <img alt="News icon placeholder, gray background with black text 'News'" class="mb-0.5" height="24" src="https://storage.googleapis.com/a1aa/image/f2a02350-129f-46df-83ee-e6e6d99581d9.jpg" width="24"/>
+     News
+    </div>
+    <div class="flex flex-col items-center text-[10px] text-black select-none w-[48px]">
+     <img alt="PayPoint icon placeholder, black background with white letter P" class="mb-0.5" height="24" src="https://storage.googleapis.com/a1aa/image/a9740dc5-ae40-44fe-8f8c-fa5606faa706.jpg" width="24"/>
+     PayPoint
+    </div>
+    <div class="flex flex-col items-center text-[10px] text-black select-none w-[48px]">
+     <img alt="Lottery icon placeholder, gray background with black letter L" class="mb-0.5" height="24" src="https://storage.googleapis.com/a1aa/image/771cda83-506a-4e81-8874-8e2e246ffb59.jpg" width="24"/>
+     Lottery
+    </div>
+    <div class="flex flex-col items-center text-[10px] text-black select-none w-[48px]">
+     <img alt="Gen Misc icon placeholder, gray background with black letters GM" class="mb-0.5" height="24" src="https://storage.googleapis.com/a1aa/image/8a32b598-f78d-452f-9bc3-9b0f8d7720d7.jpg" width="24"/>
+     Gen Misc
+    </div>
+    <div class="flex flex-col items-center text-[10px] text-black select-none w-[48px]">
+     <img alt="Fruit Veg icon placeholder, gray background with black letters FV" class="mb-0.5" height="24" src="https://storage.googleapis.com/a1aa/image/bf47fa47-3c15-4271-4132-fd944c19aafc.jpg" width="24"/>
+     Fruit Veg
+    </div>
+    <div class="flex flex-col items-center text-[10px] text-black select-none w-[48px]">
+     <img alt="WkEnd icon placeholder, gray background with black letters WE" class="mb-0.5" height="24" src="https://storage.googleapis.com/a1aa/image/fe174d8a-fb07-4f80-f0e8-0d3174a6aa54.jpg" width="24"/>
+     WkEnd
+    </div>
+    <button class="bg-yellow-400 text-black text-[12px] font-semibold rounded-sm px-3 py-1 whitespace-nowrap" style="min-width: 80px;">
+     Carrier Bag
+    </button>
+   </div>
+  </div>
+ </body>
+</html>

@@ -1,0 +1,41 @@
+{
+  "name": "billing_system",
+  "version": "1.0.0",
+  "description": "This is a small shop inventory system",
+  "main": "main.js",
+  "resolutions": {
+    "glob": "7.2.3"
+  },
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ashish3691/billing_system.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ashish3691/billing_system/issues"
+  },
+  "homepage": "https://github.com/Ashish3691/billing_system#readme",
+  "devDependencies": {
+    "electron": "^35.2.0",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.example.billing_system",
+    "productName": "Billing System",
+    "files": [
+      "**/*"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "icon.ico"
+    },
+    "directories": {
+      "buildResources": "assets"
+    }
+  }
+}

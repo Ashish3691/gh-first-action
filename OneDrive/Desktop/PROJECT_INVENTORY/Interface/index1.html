@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>POS System</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-gray-100 p-4">
+  <div class="max-w-7xl mx-auto bg-white p-6 rounded-lg shadow-md">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      
+      <!-- Product Categories -->
+      <div class="bg-gray-50 p-4 rounded-md shadow-sm">
+        <h2 class="text-lg font-bold mb-2">Categories</h2>
+        <ul id="categoryList" class="space-y-2"></ul>
+      </div>
+
+      <!-- Product Items -->
+      <div class="bg-gray-50 p-4 rounded-md shadow-sm">
+        <h2 class="text-lg font-bold mb-2">Products</h2>
+        <div id="productList" class="grid grid-cols-2 gap-4"></div>
+      </div>
+
+      <!-- Cart -->
+      <div class="bg-gray-50 p-4 rounded-md shadow-sm">
+        <h2 class="text-lg font-bold mb-2">Cart</h2>
+        <ul id="cartList" class="space-y-2"></ul>
+        <div class="mt-4">
+          <p class="text-right font-bold">Total: $<span id="totalPrice">0.00</span></p>
+          <button onclick="checkout()" class="mt-2 w-full bg-green-500 text-white py-2 rounded hover:bg-green-600">
+            Checkout
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
